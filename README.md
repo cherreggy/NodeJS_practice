@@ -113,13 +113,19 @@ app.get("/download", (req, res) => {
 
 现在可以暂时跑一下看看效果，在本地服务器 localhost:3000 上进行测试，输入 url：`http://localhost:3000/download?imageUrl=`，现在没有给具体的网络图片地址，将显示如下界面：
 <image src="1.png"/>
+
 现在提供一个网络图片的 url`https://cdn-icons-png.flaticon.com/512/2194/2194807.png`，但是现在出现了访问失败的问题：
 <image src="2.png"/>
+
 原因是我没有创建 data 文件夹导致服务器内部文件读取发生错误，创建好文件夹之后的效果如下：
 <image src="3.png"/>
+
 现在通过浏览器请求 url 后，服务器自动将图片保存在了 data 文件夹下：
 <image src="4.png"/>
+
 现在通过 inspect 调试工具查看服务器的性能情况：
 <image src="5.png"/>
+
 <image src="6.png"/>
+
 <font color=red>携程 CAT 的部分如何实现呢？参考链接：https://blog.csdn.net/xiaoyi52/article/details/109671668</font>
